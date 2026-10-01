@@ -21,7 +21,10 @@ jobs:
 
       - name: Static export
         working-directory: web
-        run: SECRET_KEY_BASE=${{ secrets.SECRET_KEY_BASE }} bundle exec rake static:export
+        env:
+          RAILS_ENV: production
+          SECRET_KEY_BASE: ${{ secrets.SECRET_KEY_BASE }}
+        run: bundle exec rake static:export
 
       - name: Deploy to Cloudflare Workers
         uses: cloudflare/wrangler-action@v3

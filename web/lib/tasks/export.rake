@@ -9,6 +9,10 @@ namespace :static do
 
     Rake::Task["assets:precompile"].invoke
 
+    # Integration requests carry a synthetic host; don't let host
+    # authorization reject them regardless of RAILS_ENV.
+    Rails.application.config.hosts.clear
+
     session = ActionDispatch::Integration::Session.new(Rails.application)
     { "/" => "index.html" }.each do |path, file|
       session.get(path)
