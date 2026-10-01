@@ -7,7 +7,7 @@ class PagesControllerTest < ActionDispatch::IntegrationTest
     assert_select "nav a.nav-brand", "Home"
     assert_select 'nav a[href="https://www.linkedin.com/in/joaquin-bonilla/"]', "Linkedin"
     assert_select 'nav a[href="https://github.com/JO0812"]', "Github"
-    assert_select 'nav a.nav-cta[href="https://cal.com/joaquin-bonilla-vyzlsv"]', "Let's talk"
+    assert_select 'nav a.nav-cta[href="https://cal.com/jo-is-here"]', "Let's talk"
   end
 
   test "home renders the profile" do
