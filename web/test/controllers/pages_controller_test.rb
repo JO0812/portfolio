@@ -1,12 +1,13 @@
 require "test_helper"
 
 class PagesControllerTest < ActionDispatch::IntegrationTest
-  test "nav carries home and the socials" do
+  test "nav carries home, the socials, and the booking CTA" do
     get root_path
     assert_response :success
     assert_select "nav a.nav-brand", "Home"
     assert_select 'nav a[href="https://www.linkedin.com/in/joaquin-bonilla/"]', "Linkedin"
     assert_select 'nav a[href="https://github.com/JO0812"]', "Github"
+    assert_select 'nav a.nav-cta[href="https://cal.com/joaquin-bonilla-vyzlsv"]', "Let's talk"
   end
 
   test "home renders the profile" do

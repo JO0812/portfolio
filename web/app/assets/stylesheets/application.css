@@ -107,9 +107,10 @@ a {
   margin-inline: auto;
   padding: 0.9rem var(--spacing-gutter);
   display: flex;
-  align-items: baseline;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.6rem 1.25rem;
   justify-content: flex-start;
-  gap: 1.5rem;
 }
 
 .nav-brand {
@@ -133,6 +134,28 @@ a {
 
 .nav-link:hover {
   color: var(--color-accent);
+}
+
+/* Primary CTA, pushed to the right of the nav row. */
+.nav-cta {
+  margin-left: auto;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  line-height: 1;
+  color: var(--color-accent);
+  border: 1px solid var(--color-line-strong);
+  padding: 0.45rem 0.75rem;
+  white-space: nowrap;
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.nav-cta:hover {
+  background: var(--color-accent);
+  border-color: var(--color-accent);
+  color: var(--color-background);
 }
 
 /* Type. */
@@ -293,6 +316,16 @@ html[data-motion] [data-stagger] > *:nth-child(n + 6) {
 @media (hover: none), (prefers-reduced-motion: reduce) {
   .cursor-glow {
     display: none;
+  }
+}
+
+@media (max-width: 30rem) {
+  .nav-inner {
+    gap: 0.5rem 0.9rem;
+  }
+
+  .nav-cta {
+    padding: 0.4rem 0.6rem;
   }
 }
 
