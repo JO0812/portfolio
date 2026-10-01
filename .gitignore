@@ -1,0 +1,12 @@
+# Cloudflare Wrangler state (contains account/cache data, never commit)
+.wrangler/
+
+# Rails app build artifacts and generated deploy output
+web/dist/
+web/public/assets/
+web/log/*
+web/tmp/*
+web/storage/*
+web/.bundle
+web/.env*
+web/config/*.key

@@ -1,0 +1,7 @@
+# Cloudflare Workers Static Assets — serves web/dist/ (see web/lib/tasks/export.rake).
+# Free tier: no sleep, global CDN. First deploy: `npx wrangler deploy` from this directory.
+name = "joaquin-portfolio"
+compatibility_date = "2026-09-30"
+
+[assets]
+directory = "./web/dist"

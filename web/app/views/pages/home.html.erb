@@ -1,0 +1,48 @@
+<% content_for :title, "Joaquin Bonilla" %>
+
+<main class="page" data-controller="reveal">
+  <h1 class="page-title" data-reveal><%= @profile.name %></h1>
+  <p class="tagline" data-reveal><%= @profile.tagline %></p>
+
+  <p class="bio" data-reveal>
+    <% @profile.bio.each do |segment| %><%= segment["text"] %><% end %>
+  </p>
+
+  <section id="work" aria-label="Work">
+    <h2 class="section-title" data-reveal>Work</h2>
+
+    <div class="job-list" data-reveal data-stagger>
+      <% @experience.jobs.each do |job| %>
+        <article class="job">
+          <div class="job-head">
+            <h3 class="job-role"><%= job.role %></h3>
+            <p class="job-meta"><%= job.company %> · <%= job.location %> · <%= job.period %></p>
+          </div>
+          <p class="job-summary"><%= job.summary %></p>
+          <ul class="job-highlights">
+            <% job.highlights.each do |highlight| %>
+              <li><%= highlight %></li>
+            <% end %>
+          </ul>
+        </article>
+      <% end %>
+    </div>
+
+    <h2 class="section-title" data-reveal>Education</h2>
+    <div class="job-list" data-reveal data-stagger>
+      <% @experience.education.each do |school| %>
+        <article class="job">
+          <div class="job-head">
+            <h3 class="job-role"><%= school.school %></h3>
+            <p class="job-meta"><%= school.program %> · <%= school.period %></p>
+          </div>
+          <p class="job-summary"><%= school.note %></p>
+        </article>
+      <% end %>
+    </div>
+  </section>
+
+  <footer class="footer" data-reveal>
+    <span>© <%= Time.current.year %> <%= @profile.name %></span>
+  </footer>
+</main>

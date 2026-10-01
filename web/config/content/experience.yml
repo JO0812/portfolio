@@ -1,0 +1,27 @@
+# Work history, newest first. Rendered on /work.
+jobs:
+  - company: "BICE VIDA"
+    role: "Backend Developer"
+    location: "Santiago, Chile"
+    period: "Jul 2023 – Jul 2026"
+    summary: "Critical high-availability systems for digital channels of a leading Chilean life and health insurer."
+    highlights:
+      - "Led design of the automated reimbursement system, migrating an on-premise monolith to AWS microservices — latency 15s → 70ms, ~300 transactions/min with Redis caching and Kafka event-driven messaging."
+      - "Built an end-to-end Go document pipeline replacing Oracle Reports (60s → 500ms, 40,000 transactions/day), rendering branded PDFs via Gotenberg with S3 storage and pre-signed URLs."
+      - "Led modernization of 13 legacy Weblogic apps (Java 6/7, JSF), eliminating 400 critical/high OWASP vulnerabilities; migrated services to Spring Boot / Java 21."
+      - "Resolved 25 critical/high production incidents within SLA (<45 min); cut MTTR with Datadog dashboards, OpenTelemetry tracing, and k6 benchmarks."
+      - "Built AI-augmented development tooling — spec-driven planning, MCP server integrations, automated review and migration scripting — across the full lifecycle."
+
+  - company: "Awakelab — Programa Talento Digital"
+    role: "Full Stack Java Trainee"
+    location: "Santiago, Chile"
+    period: "Mar 2023 – Jun 2023"
+    summary: "SENCE-certified bootcamp — 480 hours of hands-on training."
+    highlights:
+      - "Java, Spring Boot, Spring MVC, REST APIs, SQL, Git/GitHub, JUnit."
+
+education:
+  - school: "Universidad Técnica Federico Santa María"
+    program: "Software Engineering"
+    period: "2019 – 2022"
+    note: "Strong foundation in algorithms, data structures, and software architecture."

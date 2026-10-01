@@ -1,0 +1,19 @@
+# Single source of truth for the site's personal content.
+# Edit this file to change the homepage — no view changes needed.
+name: "Joaquin Bonilla"
+tagline: "Backend Developer — Java & Go · Santiago, Chile"
+description: "Joaquin Bonilla — Backend Developer specializing in Java, Go, and cloud architecture. Three years building critical high-availability systems in Chile's financial sector."
+
+# Bio rendered as a sequence of plain-text and link segments.
+bio:
+  - text: "I'm a Backend Developer in Santiago, Chile, specializing in Java and Go. I spent three years at "
+  - text: "BICE VIDA"
+  - text: " building critical high-availability systems for the financial sector — migrating an on-premise monolith to AWS microservices (15s → 70ms), rebuilding a document pipeline in Go (60s → 500ms, 40k transactions a day), and eliminating 400 critical vulnerabilities across 13 legacy apps. I use AI as a force multiplier across the full development lifecycle: spec-driven planning, MCP servers, and internal tooling that compress weeks of modernization work into days. When I'm not on Kubernetes, I cook, explore flea markets, and shoot analog photography."
+
+socials:
+  - medium: "github"
+    link: "https://github.com/JO0812"
+  - medium: "linkedin"
+    link: "https://www.linkedin.com/in/joaquin-bonilla/"
+  - medium: "email"
+    link: "mailto:jo.bonilladev@gmail.com"
